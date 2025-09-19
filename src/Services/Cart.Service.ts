@@ -2,6 +2,8 @@ import { getLoggedUserToken } from "@/lib/serverUtils";
 
 export async function getCart() {
   const token = await getLoggedUserToken();
+  console.log(token);
+
   try {
     const res = await fetch("https://ecommerce.routemisr.com/api/v1/cart", {
       headers: {

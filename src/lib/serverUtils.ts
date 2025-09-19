@@ -7,7 +7,7 @@ export async function getLoggedUserToken() {
 
   const encryptedToken =
     cookieStore.get("next-auth.session-token")?.value ||
-    cookieStore.get("__secure-next-auth.session-token")?.value;
+    cookieStore.get("__Secure-next-auth.session-token")?.value;
 
   const decryptedToken = await decode({
     token: encryptedToken,
